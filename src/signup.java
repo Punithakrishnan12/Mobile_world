@@ -14,7 +14,7 @@ public class signup{
     @BeforeMethod
     public void verify( )
     {
-//    	System.setProperty("webdriver.chrome.driver","C:\\Users\\Punithakrishnan.m\\Downloads\\chromedriver_win32\\chromedriver.exe");
+   	System.setProperty("webdriver.chrome.driver","C:\\Users\\Punithakrishnan.m\\Downloads\\chromedriver_win32\\chromedriver.exe");
         driver = new ChromeDriver();
         
          driver.get("https://mobileworld.banyanpro.com/");
@@ -27,21 +27,21 @@ public class signup{
          driver.findElement(By.cssSelector("#myName")).sendKeys(Fname);
       
          driver.findElement(By.cssSelector("input[placeholder='Last Name']")).sendKeys(Lname);
-         //Thread.sleep(1000);
+         Thread.sleep(1000);
          driver.findElement(By.cssSelector("input[placeholder='Enter Email']")).sendKeys(Email);
-         //Thread.sleep(500);
+         Thread.sleep(500);
          driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys(passwrd);
-         //Thread.sleep(500);
+         Thread.sleep(500);
          driver.findElement(By.cssSelector("input[placeholder='91XXXXXXXXXX']")).sendKeys(number);
-         //Thread.sleep(500);
+         Thread.sleep(500);
          driver.findElement(By.xpath("//input[@type='date']")).sendKeys(date);
-         //Thread.sleep(500);
+         Thread.sleep(500);
          driver.findElement(By.xpath("//textarea[@placeholder='Short Bio']")).sendKeys(bio);
-         //Thread.sleep(500);
+         Thread.sleep(500);
          driver.findElement(By.xpath("//div[@class='col-md-2']//input[@name='gender']")).click();
-         //Thread.sleep(500);
+         Thread.sleep(500);
          driver.findElement(By.xpath("//button[@type='submit']")).click();
-         //Thread.sleep(500);
+         Thread.sleep(500);
          driver.switchTo().alert().accept();
          driver.quit();
     }
